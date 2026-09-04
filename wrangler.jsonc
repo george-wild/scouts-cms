@@ -1,26 +1,32 @@
 {
-  "name": "scouts-cms",
-  "main": "src/index.js",
-  "workers_dev": true,
-  "preview_urls": true,
-  "compatibility_date": "2026-09-03",
-  "placement": {
-    "mode": "smart"
-  },
-  "observability": {
-    "enabled": true,
-    "head_sampling_rate": 1,
-    "redact_query_string": false,
-    "logs": {
-      "enabled": true,
-      "head_sampling_rate": 1,
-      "persist": true,
-      "invocation_logs": true
-    },
-    "traces": {
-      "enabled": false,
-      "persist": true,
-      "head_sampling_rate": 1
-    }
-  }
+	"name": "scouts-cms",
+	"main": "src/index.js",
+	"workers_dev": true,
+	"preview_urls": true,
+	"compatibility_date": "2026-09-03",
+	"placement": {
+		"mode": "smart"
+	},
+	"observability": {
+		"enabled": true,
+		"head_sampling_rate": 1,
+		"redact_query_string": false,
+		"logs": {
+			"enabled": true,
+			"head_sampling_rate": 1,
+			"persist": true,
+			"invocation_logs": true
+		},
+		"traces": {
+			"enabled": false,
+			"persist": true,
+			"head_sampling_rate": 1
+		}
+	},
+	"r2_buckets": [
+		{
+			"binding": "R2_TEST",
+			"bucket_name": "test"
+		}
+	]
 }
